@@ -1,0 +1,120 @@
+index.html
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Sıla’ya Özel</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #ffeef5;
+      overflow: hidden;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Zarf stili */
+    .envelope {
+      width: 300px;
+      height: 200px;
+      background: #fff;
+      border: 2px solid #e60073;
+      border-radius: 10px;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 18px;
+      font-weight: bold;
+      color: #e60073;
+      position: relative;
+      z-index: 10;
+      transition: transform 1s;
+    }
+
+    .envelope.open {
+      transform: rotateX(180deg);
+    }
+
+    /* Video ve mesaj */
+    .content {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      z-index: 5;
+    }
+
+    .content h1 {
+      color: #e60073;
+    }
+
+    .content p {
+      font-size: 18px;
+      color: #444;
+      max-width: 500px;
+    }
+
+    /* Balonlar */
+    .balloon {
+      position: absolute;
+      bottom: -100px;
+      font-size: 60px;
+      animation: rise 10s linear infinite;
+      z-index: 1;
+    }
+
+    @keyframes rise {
+      0% { transform: translateY(0); opacity: 1; }
+      100% { transform: translateY(-120vh); opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Zarf -->
+  <div class="envelope" id="envelope">📩 Tıkla ve Aç!</div>
+
+  <!-- Açıldıktan sonra gösterilecek içerik -->
+  <div class="content" id="content">
+    <h1>💌 Sıla, Benimle Çıkmak İster Misin? 💖</h1>
+    <p>
+      Bundan sonraki hayatımda kalbimin atma sebebi olur musun?  
+      Benimle yeni yola nerdesin? Benimle çıkarsın? ❤️
+    </p>
+    <!-- Kedi videosu -->
+    <video width="400" autoplay loop muted>
+      <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+      Tarayıcınız video etiketini desteklemiyor.
+    </video>
+  </div>
+
+  <!-- Kalp balonlar -->
+  <div class="balloon" style="left:10%;">❤️</div>
+  <div class="balloon" style="left:30%;">💖</div>
+  <div class="balloon" style="left:50%;">💘</div>
+  <div class="balloon" style="left:70%;">💝</div>
+  <div class="balloon" style="left:90%;">💗</div>
+
+  <script>
+    const envelope = document.getElementById('envelope');
+    const content = document.getElementById('content');
+
+    envelope.addEventListener('click', () => {
+      envelope.classList.add('open');
+      content.style.display = 'flex';
+      envelope.style.display = 'none';
+    });
+  </script>
+
+</body>
+</html><video width="300" autoplay loop muted style="border-radius: 50%; border: 5px solid #e60073; box-shadow: 0 5px 15px rgba(0,0,0,0.2);">
+  <source src="KEDİ_VIDEO_URL" type="video/mp4">
+  Tarayıcınız video etiketini desteklemiyor.
+</video>https://youtube.com/shorts/w0M3DRNRmk8?si=n1lvphl2gl7_ZHmU
+
+
+
